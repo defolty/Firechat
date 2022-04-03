@@ -31,12 +31,12 @@
                                     <segue destination="w9i-ih-4hu" kind="show" id="0yh-Gh-W3T"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ao-9x-eQB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="3ao-9x-eQB">
                                 <rect key="frame" x="52" y="418" width="310" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="l12-rT-tKp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="35"/>
                                 <color key="textColor" name="BrandBlue"/>
                                 <nil key="highlightedColor"/>
                             </label>
