@@ -1,13 +1,10 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '13.1'
 
-target 'Firechat' do
-  # Comment the next line if you don't want to use dynamic frameworks
+target 'Flash Chat iOS13' do
   use_frameworks!
 
-  # Pods for Firechat
-
-pod 'Firebase/Auth'
-pod 'Firebase/Firestore'
+  # Pods for Flash Chat iOS13
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end
