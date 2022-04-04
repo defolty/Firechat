@@ -20,6 +20,9 @@
 		FB6969E427FA41A7008A8536 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6969E327FA41A7008A8536 /* Constants.swift */; };
 		FBB2735C27FB3B0000E74EEF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2735B27FB3B0000E74EEF /* Extensions.swift */; };
 		FBB2735E27FB3BB300E74EEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBB2735D27FB3BB300E74EEF /* GoogleService-Info.plist */; };
+		FBB2736027FB745900E74EEF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2735F27FB745900E74EEF /* Message.swift */; };
+		FBB2736527FB78B700E74EEF /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2736327FB78B700E74EEF /* MessageCell.swift */; };
+		FBB2736627FB78B700E74EEF /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB2736427FB78B700E74EEF /* MessageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		FB6969E327FA41A7008A8536 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FBB2735B27FB3B0000E74EEF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FBB2735D27FB3BB300E74EEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FBB2735F27FB745900E74EEF /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		FBB2736327FB78B700E74EEF /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		FBB2736427FB78B700E74EEF /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +104,10 @@
 				FB6969C827FA39DC008A8536 /* SceneDelegate.swift */,
 				FB6969CF27FA39DD008A8536 /* Assets.xcassets */,
 				FB6969D127FA39DD008A8536 /* LaunchScreen.storyboard */,
-				FB6969E327FA41A7008A8536 /* Constants.swift */,
+				FBB2736227FB788300E74EEF /* Helpers */,
 				FB6969DC27FA39EE008A8536 /* Controller */,
 				FB6969DB27FA39E9008A8536 /* View */,
 				FB6969DA27FA39E3008A8536 /* Model */,
-				FBB2735B27FB3B0000E74EEF /* Extensions.swift */,
 			);
 			path = Firechat;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 		FB6969DA27FA39E3008A8536 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FBB2735F27FB745900E74EEF /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,7 +123,8 @@
 		FB6969DB27FA39E9008A8536 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FB6969CC27FA39DC008A8536 /* Main.storyboard */,
+				FBB2736127FB786700E74EEF /* MessageCell */,
+				FBB2736727FB798700E74EEF /* Storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +138,32 @@
 				FB6969E127FA3AB8008A8536 /* ChatViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		FBB2736127FB786700E74EEF /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				FBB2736327FB78B700E74EEF /* MessageCell.swift */,
+				FBB2736427FB78B700E74EEF /* MessageCell.xib */,
+			);
+			path = MessageCell;
+			sourceTree = "<group>";
+		};
+		FBB2736227FB788300E74EEF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FB6969E327FA41A7008A8536 /* Constants.swift */,
+				FBB2735B27FB3B0000E74EEF /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FBB2736727FB798700E74EEF /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FB6969CC27FA39DC008A8536 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB2736627FB78B700E74EEF /* MessageCell.xib in Resources */,
 				FB6969D327FA39DD008A8536 /* LaunchScreen.storyboard in Resources */,
 				FBB2735E27FB3BB300E74EEF /* GoogleService-Info.plist in Resources */,
 				FB6969D027FA39DD008A8536 /* Assets.xcassets in Resources */,
@@ -250,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB6969CB27FA39DC008A8536 /* WelcomeViewController.swift in Sources */,
+				FBB2736527FB78B700E74EEF /* MessageCell.swift in Sources */,
 				FB6969C727FA39DC008A8536 /* AppDelegate.swift in Sources */,
 				FB6969C927FA39DC008A8536 /* SceneDelegate.swift in Sources */,
+				FBB2736027FB745900E74EEF /* Message.swift in Sources */,
 				FBB2735C27FB3B0000E74EEF /* Extensions.swift in Sources */,
 				FB6969E027FA3AAC008A8536 /* LoginViewController.swift in Sources */,
 				FB6969E427FA41A7008A8536 /* Constants.swift in Sources */,

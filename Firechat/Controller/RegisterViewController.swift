@@ -15,13 +15,12 @@ class RegisterViewController: UIViewController {
     
     @IBAction func registerPressed(_ sender: UIButton) {
         if let email = emailTextfield.text, let password = passwordTextfield.text {
-            Auth.auth().createUser(withEmail: email,
-                                   password: password) { authResult, error in
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let errors = error {
                     print(errors)
                     self.showAlert(withTitle: "Error", withMessage: "\(errors.localizedDescription)")
                 } else {
-                    self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                    self.performSegue(withIdentifier: Con.registerSegue, sender: self)
                 }
             }
         }

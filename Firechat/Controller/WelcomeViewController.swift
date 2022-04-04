@@ -11,6 +11,10 @@ class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var registerOutlet: UIButton!
+    @IBOutlet weak var loginOutlet: UIButton!
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
@@ -24,6 +28,8 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViews()
+        
         titleLabel.text = ""
         var charIndex = 0.0
         let titleText = Con.appName
@@ -32,6 +38,14 @@ class WelcomeViewController: UIViewController {
                 self.titleLabel.text?.append(letter)
             }
             charIndex += 1
+        }
+    }
+    
+    func setupViews() {
+        let buttons = [registerOutlet, loginOutlet]
+        for button in buttons {
+            button?.layer.cornerRadius = 12
+            button?.clipsToBounds = true
         }
     }
 }
