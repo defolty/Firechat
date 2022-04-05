@@ -54,8 +54,18 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
-        if let messageBody = messageTextfield.text, let messageSender = Auth.auth().currentUser?.email { 
-            db.collection(<#T##collectionPath: String##String#>)
+        if let messageBody = messageTextfield.text,
+            let messageSender = Auth.auth().currentUser?.email {
+            db.collection(Con.FStore.collectionName).addDocument(data: [Con.FStore.senderField: messageSender,
+                                                                        Con.FStore.bodyField: messageBody]) { (error) in
+                if let errors = error {
+                    print(errors)
+                    self.showAlert(withTitle: "There was an issue saving data to firestore ",
+                                   withMessage: "\(errors.localizedDescription)")
+                } else {
+                    print("Successfully saved data.")
+                }
+            }
         }
     }
     
