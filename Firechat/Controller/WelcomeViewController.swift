@@ -10,7 +10,6 @@ import UIKit
 class WelcomeViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
-    
     @IBOutlet weak var registerOutlet: UIButton!
     @IBOutlet weak var loginOutlet: UIButton!
     
@@ -28,8 +27,11 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupAnimation()
         setupViews()
-        
+    }
+    
+    private func setupAnimation() {
         titleLabel.text = ""
         var charIndex = 0.0
         let titleText = Con.appName
@@ -41,7 +43,7 @@ class WelcomeViewController: UIViewController {
         }
     }
     
-    func setupViews() {
+    private func setupViews() {
         let buttons = [registerOutlet, loginOutlet]
         for button in buttons {
             button?.layer.cornerRadius = 12

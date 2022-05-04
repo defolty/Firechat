@@ -11,14 +11,14 @@ class MessageCell: UITableViewCell {
 
     @IBOutlet weak var messageView: UIView!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var rightImageView: UIImageView!
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        messageView.layer.cornerRadius = 12
-        messageLabel.numberOfLines = 0
+        setupCellViews()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,4 +27,8 @@ class MessageCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    private func setupCellViews() { 
+        messageView.layer.cornerRadius = messageView.frame.size.height / 5
+        messageLabel.numberOfLines = 0 
+    }
 }

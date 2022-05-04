@@ -32,7 +32,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func tryLogin() {
+    private func tryLogin() {
         emailTextfield.text = "1@2.com"
         passwordTextfield.text = "123456"
     }

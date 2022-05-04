@@ -8,7 +8,7 @@
 import Foundation
 
 struct Con {
-    static let appName = "⚡️FlashChat"
+    static let appName = "🔥FireChat"
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
     static let registerSegue = "RegisterToChat"
@@ -21,7 +21,7 @@ struct Con {
         static let lighBlue = "BrandLightBlue"
     }
     
-    struct FStore {
+    struct FireStore {
         static let collectionName = "messages"
         static let senderField = "sender"
         static let bodyField = "body"
